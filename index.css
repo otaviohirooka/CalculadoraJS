@@ -48,3 +48,9 @@ button:active {
 button:focus, input:focus {
 	outline:none;
 }
+
+#resultado {
+	height: 50px;
+	width: 15%;
+	border: 2px solid #2f9844;
+}
