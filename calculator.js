@@ -39,12 +39,16 @@ document.getElementById('btn-multiplicacao').addEventListener('click', () => {
 
 document.getElementById('btn-divisao').addEventListener('click', () => {
 
-    if(entrada1.value != "" && entrada2.value != "" && entrada2.value != '0') {
+    if(entrada1.value == "" || entrada2.value == "") {
+        alert("Digite um número em todos os campos");
+        
+    }
+    else if(entrada2.value == '0') {
+        alert("Não é possíver realizar divisão por 0");
+    }
+    else {
         resultado = Number(entrada1.value) / Number(entrada2.value);
         result.innerText = resultado;
-    }
-    else{
-        alert("Digite um número em todos os campos");
     }
 
 });
