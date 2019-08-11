@@ -6,42 +6,54 @@ let resultado = 0;
 
 document.getElementById('btn-soma').addEventListener('click', () => {
 
-    if(entrada1.value != "" && entrada2.value != "") {
-        resultado = Number(entrada1.value) + Number(entrada2.value);
-        result.innerText = resultado;
+    if(entrada1.value == "" || entrada2.value == "") {
+        alert("Você deixou um espaço em branco! Preencha todos os campos.");
+    }
+    else if (isNaN(entrada1.value) || isNaN(entrada2.value)){
+        alert("Você digitou um caracter! Troque por um número.");
     }
     else{
-        alert("Digite um número em todos os campos");
+        resultado = Number(entrada1.value) + Number(entrada2.value);
+        result.innerText = resultado;
     }
 });
 
 document.getElementById('btn-subtracao').addEventListener('click', () => {
 
-    if(entrada1.value != "" && entrada2.value != "") {
-        resultado = Number(entrada1.value) - Number(entrada2.value);
-        result.innerText = resultado;
+    if(entrada1.value == "" || entrada2.value == "") {
+        alert("Você deixou um espaço em branco! Preencha todos os campos.");
+    }
+    else if (isNaN(entrada1.value) || isNaN(entrada2.value)){
+        alert("Você digitou um caracter! Troque por um número.");
     }
     else{
-        alert("Digite um número em todos os campos");
+        resultado = Number(entrada1.value) - Number(entrada2.value);
+        result.innerText = resultado;
     }
 });
 
 document.getElementById('btn-multiplicacao').addEventListener('click', () => {
 
-    if(entrada1.value != "" && entrada2.value != "") {
-        resultado = Number(entrada1.value) * Number(entrada2.value);
-        result.innerText = resultado;
+    if(entrada1.value == "" || entrada2.value == "") {
+        alert("Você deixou um espaço em branco! Preencha todos os campos.");
+    }
+    else if (isNaN(entrada1.value) || isNaN(entrada2.value)){
+        alert("Você digitou um caracter! Troque por um número.");
     }
     else{
-        alert("Digite um número em todos os campos");
+        resultado = Number(entrada1.value) * Number(entrada2.value);
+        result.innerText = resultado;
     }
 });
 
 document.getElementById('btn-divisao').addEventListener('click', () => {
 
     if(entrada1.value == "" || entrada2.value == "") {
-        alert("Digite um número em todos os campos");
+        alert("Você deixou um espaço em branco! Preencha todos os campos.");
         
+    }
+    else if (isNaN(entrada1.value) || isNaN(entrada2.value)){
+        alert("Você digitou um caracter! Troque por um número.");
     }
     else if(entrada2.value == '0') {
         alert("Não é possíver realizar divisão por 0");
